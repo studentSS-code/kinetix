@@ -1,0 +1,25 @@
+{
+  "name": "kinetix-trip-planner",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "server": "python -m uvicorn app.main:app --app-dir backend --host 0.0.0.0 --port 8787",
+    "dev:network": "concurrently -k \"npm run server\" \"npm run dev -- --host 0.0.0.0\"",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "lucide-react": "latest",
+    "cors": "latest",
+    "dotenv": "latest",
+    "express": "latest",
+    "concurrently": "latest"
+  },
+  "devDependencies": {}
+}
